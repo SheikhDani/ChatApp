@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/padding10">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:padding="@dimen/padding10"
+            android:text="@string/strMsgAuthenticate"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="12sp"
+            android:textStyle="normal" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding10">
+
+            <EditText
+                android:id="@+id/txtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="start"
+                android:hint="@string/strEmail"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:textAlignment="viewStart"
+                android:textStyle="normal" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding10">
+
+            <EditText
+                android:id="@+id/txtPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="start"
+                android:hint="@string/strPassword"
+                android:inputType="textPassword|textNoSuggestions"
+                android:maxLines="1"
+                android:textAlignment="viewStart" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <com.multilingual.firebase.chat.activities.views.MaterialRippleLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mrl_rippleColor="@color/white"
+            app:mrl_rippleOverlay="true"
+            app:mrl_rippleRoundedCorners="@dimen/padding10">
+
+            <Button
+                android:id="@+id/btnSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding20"
+                android:layout_marginTop="@dimen/padding20"
+                android:layout_marginRight="@dimen/padding20"
+                android:layout_marginBottom="@dimen/padding10"
+                android:background="@drawable/rounded"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/strReAuthenticate"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textStyle="normal" />
+
+        </com.multilingual.firebase.chat.activities.views.MaterialRippleLayout>
+
+        <com.multilingual.firebase.chat.activities.views.MaterialRippleLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mrl_rippleColor="@color/white"
+            app:mrl_rippleOverlay="true"
+            app:mrl_rippleRoundedCorners="@dimen/padding10">
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding20"
+                android:layout_marginRight="@dimen/padding20"
+                android:layout_marginBottom="@dimen/padding10"
+                android:background="@drawable/rounded_transparent"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:paddingTop="@dimen/padding10"
+                android:paddingBottom="@dimen/padding10"
+                android:text="@string/strCancel"
+                android:textAllCaps="true"
+                android:textStyle="normal" />
+
+        </com.multilingual.firebase.chat.activities.views.MaterialRippleLayout>
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

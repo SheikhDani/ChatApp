@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.multilingual.firebase.chat.activities.views.MaterialRippleLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:mrl_rippleColor="@color/grey_600"
+    app:mrl_rippleOverlay="true"
+    app:mrl_rippleRoundedCorners="@dimen/padding10">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding10"
+        android:paddingTop="@dimen/padding5"
+        android:paddingRight="@dimen/padding10"
+        android:paddingBottom="@dimen/padding5">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/padding50"
+            android:layout_height="@dimen/padding50"
+            android:layout_centerVertical="true"
+            android:src="@drawable/profile_avatar"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="1dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/padding10"
+            android:layout_marginLeft="@dimen/padding10"
+            android:layout_toLeftOf="@+id/scb"
+            android:layout_toEndOf="@+id/imageView"
+            android:layout_toRightOf="@+id/imageView"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/txtUsername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/strUsername"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/font_sixteen" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtLastMsg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/padding30"
+                    android:layout_marginRight="@dimen/padding30"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/strUsername"
+                    android:textColor="@color/greyText"
+                    android:textSize="@dimen/font_twelve"
+                    android:visibility="visible" />
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <com.multilingual.firebase.chat.activities.views.smoothcb.SmoothCheckBox
+            android:id="@+id/scb"
+            android:layout_width="@dimen/padding24"
+            android:layout_height="@dimen/padding24"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            app:color_unchecked_stroke="@color/grey_350"
+            app:color_checked="@color/colorAccent"
+            android:layout_margin="@dimen/padding5" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgBGWhite"
+            android:layout_width="@dimen/padding16"
+            android:layout_height="@dimen/padding16"
+            android:layout_alignEnd="@+id/imageView"
+            android:layout_alignRight="@+id/imageView"
+            android:layout_alignBottom="@+id/imageView"
+            android:layout_marginEnd="@dimen/padding3"
+            android:layout_marginRight="@dimen/padding3"
+            android:src="@mipmap/ic_launcher"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="@dimen/padding7" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgOn"
+            android:layout_width="@dimen/padding12"
+            android:layout_height="@dimen/padding12"
+            android:layout_alignEnd="@+id/imageView"
+            android:layout_alignRight="@+id/imageView"
+            android:layout_alignBottom="@+id/imageView"
+            android:layout_marginEnd="@dimen/padding5"
+            android:layout_marginRight="@dimen/padding5"
+            android:layout_marginBottom="@dimen/padding2"
+            android:src="@mipmap/ic_launcher"
+            android:visibility="gone"
+            app:civ_border_color="@color/online"
+            app:civ_border_width="@dimen/padding7" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgOff"
+            android:layout_width="@dimen/padding12"
+            android:layout_height="@dimen/padding12"
+            android:layout_alignEnd="@+id/imageView"
+            android:layout_alignRight="@+id/imageView"
+            android:layout_alignBottom="@+id/imageView"
+            android:layout_marginEnd="@dimen/padding5"
+            android:layout_marginRight="@dimen/padding5"
+            android:layout_marginBottom="@dimen/padding2"
+            android:src="@mipmap/ic_launcher"
+            android:visibility="visible"
+            app:civ_border_color="@color/offline"
+            app:civ_border_width="@dimen/padding7" />
+    </RelativeLayout>
+</com.multilingual.firebase.chat.activities.views.MaterialRippleLayout>

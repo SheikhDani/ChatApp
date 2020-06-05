@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/MenuStyle">
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/adView"
+        android:layout_below="@+id/appLayout"
+        android:background="@color/grey_10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v4.widget.NestedScrollView
+                android:id="@+id/nested_scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none"
+                android:scrollingCache="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/fontRegularStyle"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="@string/profile_setting"
+                        android:textColor="@color/grey_500" />
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        app:cardCornerRadius="0dp"
+                        app:cardElevation="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/layoutNotification"
+                                style="@style/settingLayout">
+
+                                <ImageButton
+                                    style="@style/settingImage"
+                                    android:contentDescription="@string/app_name"
+                                    android:tint="@color/green_a_700"
+                                    app:srcCompat="@drawable/ic_web" />
+
+                                <TextView
+                                    style="@style/fontLightSettingStyle"
+                                    android:layout_marginEnd="@dimen/padding3"
+                                    android:layout_marginRight="@dimen/padding3"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:text="@string/notification" />
+
+                                <android.support.v7.widget.SwitchCompat
+                                    android:id="@+id/notificationOnOff"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/padding10"
+                                    android:layout_marginRight="@dimen/padding10"
+                                    android:checked="true"
+                                    app:thumbTint="@color/switch_color_primary" />
+
+                            </LinearLayout>
+
+                            <View style="@style/settingHorizontalLine" />
+
+                            <LinearLayout
+                                android:id="@+id/layoutRTL"
+                                android:visibility="gone"
+                                style="@style/settingLayout">
+
+                                <ImageButton
+                                    style="@style/settingImage"
+                                    android:contentDescription="@string/app_name"
+                                    android:tint="@color/blue_a_200"
+                                    app:srcCompat="@drawable/ic_web" />
+
+                                <TextView
+                                    style="@style/fontLightSettingStyle"
+                                    android:layout_marginEnd="@dimen/padding3"
+                                    android:layout_marginRight="@dimen/padding3"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:text="@string/chat_language" />
+
+                                <android.support.v7.widget.SwitchCompat
+                                    android:id="@+id/rtlOnOff"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/padding10"
+                                    android:layout_marginRight="@dimen/padding10"
+                                    android:checked="false"
+                                    app:thumbTint="@color/switch_color_primary" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <TextView
+                        style="@style/fontRegularStyle"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="@string/general_setting"
+                        android:textColor="@color/grey_500" />
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        app:cardCornerRadius="0dp"
+                        app:cardElevation="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/layoutRateApp"
+                                android:visibility="gone"
+                                style="@style/settingLayout">
+
+                                <ImageButton
+                                    style="@style/settingImage"
+                                    android:contentDescription="@string/app_name"
+                                    android:tint="@color/red_500"
+                                    app:srcCompat="@drawable/ic_favorite_white" />
+
+
+                                <TextView
+                                    style="@style/fontLightSettingStyle"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:text="@string/strRateApp" />
+
+                                <ImageButton
+                                    style="@style/settingImageGray"
+                                    android:contentDescription="@string/app_name"
+                                    app:srcCompat="@drawable/ic_arrow_right" />
+
+                            </LinearLayout>
+
+                            <View style="@style/settingHorizontalLine" />
+
+                            <LinearLayout
+                                android:id="@+id/layoutShare"
+                                android:visibility="gone"
+                                style="@style/settingLayout">
+
+                                <ImageButton
+                                    style="@style/settingImage"
+                                    android:contentDescription="@string/app_name"
+                                    android:tint="@color/blue_500"
+                                    app:srcCompat="@drawable/ic_share" />
+
+                                <TextView
+                                    style="@style/fontLightSettingStyle"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:text="@string/strShareapp" />
+
+                                <ImageButton
+                                    style="@style/settingImageGray"
+                                    android:contentDescription="@string/app_name"
+                                    app:srcCompat="@drawable/ic_arrow_right" />
+
+                            </LinearLayout>
+
+                            <View style="@style/settingHorizontalLine" />
+
+                            <LinearLayout
+                                android:id="@+id/layoutAbout"
+                                style="@style/settingLayout">
+
+                                <ImageView
+                                    android:layout_width="@dimen/padding40"
+                                    android:layout_height="@dimen/padding40"
+                                    android:background="@android:color/transparent"
+                                    android:contentDescription="@string/app_name"
+                                    android:padding="@dimen/padding8"
+                                    android:tint="@color/green_600"
+                                    app:srcCompat="@drawable/ic_about" />
+
+                                <TextView
+                                    style="@style/fontLightSettingStyle"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:text="@string/lblAboutUs" />
+
+                                <ImageButton
+                                    style="@style/settingImageGray"
+                                    android:contentDescription="@string/app_name"
+                                    app:srcCompat="@drawable/ic_arrow_right" />
+
+                            </LinearLayout>
+
+                            <View style="@style/settingHorizontalLine" />
+
+                            <LinearLayout
+                                android:id="@+id/layoutPrivacyPolicy"
+                                style="@style/settingLayout">
+
+                                <ImageButton
+                                    style="@style/settingImage"
+                                    android:contentDescription="@string/app_name"
+                                    android:tint="@color/orange_600"
+                                    app:srcCompat="@drawable/ic_web" />
+
+
+                                <TextView
+                                    style="@style/fontLightSettingStyle"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:text="@string/lblPrivacyPolicy" />
+
+
+                                <ImageButton
+                                    style="@style/settingImageGray"
+                                    android:contentDescription="@string/app_name"
+                                    app:srcCompat="@drawable/ic_arrow_right" />
+
+                            </LinearLayout>
+
+                            <View style="@style/settingHorizontalLine" />
+
+                            <LinearLayout
+                                android:id="@+id/layoutLogout"
+                                style="@style/settingLayout">
+
+                                <ImageButton
+                                    style="@style/settingImage"
+                                    android:contentDescription="@string/app_name"
+                                    android:padding="@dimen/padding10"
+                                    android:tint="@color/red_600"
+                                    app:srcCompat="@drawable/ic_exit_to_app" />
+
+                                <TextView
+                                    style="@style/fontLightSettingStyle"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:text="@string/strLogout" />
+
+                                <ImageButton
+                                    style="@style/settingImageGray"
+                                    android:contentDescription="@string/app_name"
+                                    app:srcCompat="@drawable/ic_arrow_right" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="@dimen/padding10"
+                        android:visibility="gone"
+                        android:text="BytesBee\nApp version 1.3" />
+                </LinearLayout>
+
+            </android.support.v4.widget.NestedScrollView>
+        </LinearLayout>
+    </ScrollView>
+
+    <!--<com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"-->
+        <!--android:id="@+id/adView"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--ads:adSize="SMART_BANNER"-->
+        <!--android:visibility="gone"-->
+        <!--ads:adUnitId="@string/banner_app_id" />-->
+</RelativeLayout>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/padding10"
+    app:cardElevation="@dimen/padding10">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/padding7"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/padding20"
+            android:paddingTop="@dimen/padding10"
+            android:paddingRight="@dimen/padding20">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/padding5"
+                android:layout_marginBottom="@dimen/padding10"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/strSelectLanguage"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="22sp"
+                android:textStyle="normal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioGroup
+                    android:id="@+id/rdoGroupGender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/rdoMale"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="start|center_vertical"
+                        android:padding="@dimen/padding12"
+                        android:text="@string/english"
+                        android:textAlignment="viewStart"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdoFemale"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="start|center_vertical"
+                        android:padding="@dimen/padding12"
+                        android:text="@string/french"
+                        android:textAlignment="viewStart"
+                        android:textSize="18sp" />
+                    <RadioButton
+                        android:id="@+id/rdospanish"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="start|center_vertical"
+                        android:padding="@dimen/padding12"
+                        android:text="@string/spanish"
+                        android:textAlignment="viewStart"
+                        android:textSize="18sp" />
+                    <RadioButton
+                        android:id="@+id/rdoarabic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="start|center_vertical"
+                        android:padding="@dimen/padding12"
+                        android:text="@string/arabic"
+                        android:textAlignment="viewStart"
+                        android:textSize="18sp" />
+                    <RadioButton
+                        android:id="@+id/rdohindi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="start|center_vertical"
+                        android:padding="@dimen/padding12"
+                        android:text="@string/hindi"
+                        android:textAlignment="viewStart"
+                        android:textSize="18sp" />
+                    <RadioButton
+                        android:id="@+id/rdoaffricans"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="start|center_vertical"
+                        android:padding="@dimen/padding12"
+                        android:text="@string/afrikaans"
+                        android:textAlignment="viewStart"
+                        android:textSize="18sp" />
+                    <RadioButton
+                        android:id="@+id/rdotswanu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="start|center_vertical"
+                        android:padding="@dimen/padding12"
+                        android:text="@string/tswana"
+                        android:textAlignment="viewStart"
+                        android:textSize="18sp" />
+                    <RadioButton
+                        android:id="@+id/rdozulu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="start|center_vertical"
+                        android:padding="@dimen/padding12"
+                        android:text="@string/zulu"
+                        android:textAlignment="viewStart"
+                        android:textSize="18sp" />
+                    <RadioButton
+                        android:id="@+id/rdorussian"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="start|center_vertical"
+                        android:padding="@dimen/padding12"
+                        android:text="@string/russian"
+                        android:textAlignment="viewStart"
+                        android:textSize="18sp" />
+                    <RadioButton
+                        android:id="@+id/rdoswahili"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="start|center_vertical"
+                        android:padding="@dimen/padding12"
+                        android:text="@string/swahili"
+                        android:textAlignment="viewStart"
+                        android:textSize="18sp" />
+                </RadioGroup>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/padding10"
+            android:paddingRight="@dimen/padding10">
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btnCancel"
+                style="?attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:text="@string/strCancel" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btnDone"
+                style="?attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/strDone" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
